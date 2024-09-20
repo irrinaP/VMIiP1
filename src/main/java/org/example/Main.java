@@ -19,7 +19,7 @@ public class Main {
     public static String reverseStr(String string) {
         String result = "";
         for (int index = string.length() - 1; index >= 0; --index) {
-            result = result + string.charAt(index);
+            result += string.charAt(index);
         }
         return result;
     }
@@ -54,14 +54,17 @@ public class Main {
 
     // Проверка на палиндром
     public static boolean isPalindrome(String string) {
-        string = string.toLowerCase();
-        int length = string.length();
-        for (int i = 0; i < length / 2; i++) {
-            if (string.charAt(i) != string.charAt(length - i - 1)) {
-                return false;
-            }
-        }
-        return true;
+        String s2 = reverseStr(string);
+        return s2.equals(string);
+
+//        string = string.toLowerCase();
+//        int length = string.length();
+//        for (int i = 0; i < length / 2; i++) {
+//            if (string.charAt(i) != string.charAt(length - i - 1)) {
+//                return false;
+//            }
+//        }
+//        return true;
     }
 
     public static void main(String[] args) {
