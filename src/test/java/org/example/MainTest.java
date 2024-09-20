@@ -24,13 +24,13 @@ class MainTest {
         try {
             Main.quadraticEquation(1, -5, 9);
         } catch (Exception ex) {
-            assertEquals("There are no real roots", ex.getMessage());
+            assertEquals("Нет вещественных корней.", ex.getMessage());
         }
 
         try {
             Main.quadraticEquation(0, -3, 4);
         } catch (Exception ex) {
-            assertEquals("Its not quadratic equation", ex.getMessage());
+            assertEquals("Это не квадратное уравнение.", ex.getMessage());
         }
 
         assertEquals(2, Main.quadraticEquation(1, -4, 4)[0]);
